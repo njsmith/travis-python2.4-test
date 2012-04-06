@@ -4,6 +4,7 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
+  - dpkg -L zlib1g-dev
   - set -v
   - echo hello1
   - echo hello2
