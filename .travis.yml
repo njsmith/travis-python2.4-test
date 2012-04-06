@@ -1,5 +1,12 @@
+language: python
 python:
   - 2.6
+before_install:
+  - mkdir foo
+  - cd foo
+  - ASDF=GHJK
 script:
-  ./fetch-and-build-2.4.sh
+  - pwd
+  - echo $ASDF
+  - ./fetch-and-build-2.4.sh
   
