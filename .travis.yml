@@ -4,10 +4,11 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
-  - virtualenv --distribute foo
-  - ls -R foo
   - set -v
   - echo hello1
+  - if [ $TEST_VAR == foo ]; then
+      echo yep it does
+    fi
   - echo hello2
 install:
   - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
