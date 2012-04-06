@@ -1,10 +1,13 @@
 language: python
 python:
   - 2.6
+env:
+  - TEST_VAR=foo
 before_install:
-  - which virtualenv
-  - which python
-  - head $(which virtualenv)
+  - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
+  - if [ "$TEST_VAR" = "foo" ]; then
+  -   echo also ok
+  - fi
   - mkdir foo
   - cd foo
   - ASDF=GHJK
