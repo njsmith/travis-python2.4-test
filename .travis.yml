@@ -4,6 +4,9 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
+  - set -o
+  - set -v
+  - set -x
   - echo "here we go"
 install:
   - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
