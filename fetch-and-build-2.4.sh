@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -x -e
 
 INSTALL_DIR=$PWD/python-2.4-install
