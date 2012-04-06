@@ -2,6 +2,9 @@ language: python
 python:
   - 2.6
 before_install:
+  - which virtualenv
+  - which python
+  - head $(which virtualenv)
   - mkdir foo
   - cd foo
   - ASDF=GHJK
