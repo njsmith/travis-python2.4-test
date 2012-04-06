@@ -4,8 +4,8 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
-  - virtualenv foo
   - virtualenv --distribute foo
+  - ls -R foo
   - set -v
   - echo hello1
   - echo hello2
