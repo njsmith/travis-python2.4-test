@@ -1,0 +1,5 @@
+python:
+  - 2.6
+script:
+  ./fetch-and-build-2.4.sh
+  
