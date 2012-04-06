@@ -5,7 +5,8 @@ env:
   - TEST_VAR=foo
 before_install:
   - set -v
-  - echo "hello"
+  - echo hello1
+  - echo hello2
 install:
   - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
   - mkdir foo
