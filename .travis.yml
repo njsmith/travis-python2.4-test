@@ -4,15 +4,10 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
-  - set -o
   - set -v
-  - set -x
-  - echo "here we go"
+  - echo "hello"
 install:
   - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
-  - if [ "$TEST_VAR" = "foo" ]; then
-  -   echo also ok
-  - fi
   - mkdir foo
   - cd foo
   - ASDF=GHJK
