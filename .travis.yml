@@ -4,7 +4,8 @@ python:
 env:
   - TEST_VAR=foo
 before_install:
-  - dpkg -L zlib1g-dev
+  - virtualenv foo
+  - virtualenv --distribute foo
   - set -v
   - echo hello1
   - echo hello2
