@@ -4,9 +4,12 @@ python:
 before_install:
   - python -c 'import sys; print sys.path'
   - python -c 'import numpy; print numpy.__file__'
+  - ls -l /home/travis/virtualenv/python2.6/lib/python2.6/site-packages
+  - ls -l /home/travis/virtualenv/python2.6/lib/python2.6/site-packages/numpy
 install:
-  - pip install http://switch.dl.sourceforge.net/project/numpy/NumPy/${NUMPY_VER}/numpy-1.7.0b2.tar.gz
+  - pip install https://github.com/numpy/numpy/archive/master.tar.gz
 script:
   - python -c 'import sys; print sys.path'
   - python -c 'import numpy; print numpy.__file__'
-  
+  - ls -l /home/travis/virtualenv/python2.6/lib/python2.6/site-packages
+  - ls -l /home/travis/virtualenv/python2.6/lib/python2.6/site-packages/numpy
