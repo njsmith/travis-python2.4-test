@@ -9,8 +9,8 @@ before_install:
   - ls -l /home/travis/virtualenv/python2.6/lib/python2.6/site-packages/numpy/core/tests
 install:
   # pip install https://github.com/numpy/numpy/archive/master.tar.gz
-  - curl -O https://github.com/numpy/numpy/archive/master.tar.gz
-  - tar xvzf master.tar.gz
+  - curl -O https://nodeload.github.com/numpy/numpy/tar.gz/master
+  - tar xvzf master
   - pushd numpy-master
   - python setup.py install
   - popd
