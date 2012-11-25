@@ -1,22 +1,12 @@
 language: python
 python:
   - 2.6
-env:
-  - TEST_VAR=foo
 before_install:
-  - set -v
-  - echo hello1
-  - if [ $TEST_VAR == foo ]; then
-      echo yep it does
-    fi
-  - echo hello2
+  - python -c 'import sys; print sys.path'
+  - python -c 'import numpy; print numpy.__file__'
 install:
-  - if [ "$TEST_VAR" = "foo" ]; then echo ok; fi
-  - mkdir foo
-  - cd foo
-  - ASDF=GHJK
+  - pip install http://switch.dl.sourceforge.net/project/numpy/NumPy/${NUMPY_VER}/numpy-1.7.0b2.tar.gz
 script:
-  - pwd
-  - echo $ASDF
-  - ./fetch-and-build-2.4.sh
+  - python -c 'import sys; print sys.path'
+  - python -c 'import numpy; print numpy.__file__'
   
